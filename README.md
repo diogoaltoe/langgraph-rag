@@ -74,6 +74,12 @@ The repository is organized as follows:
 - `main.py`: Entry point for the application.
 - `const.py`: Defines constants used across the project.
 
+## Graph Overview
+
+The following diagram illustrates the workflow implemented using LangGraph:
+
+![Graph Overview](assets/graph.png)
+
 ## Contributing
 
 Contributions are welcome! To contribute:
@@ -96,4 +102,5 @@ Special thanks to the [LangGraph](https://github.com/langchain-ai/langgraph) tea
 
 ---
 
-*This README follows best practices as outlined in [Make a README](https://www.makeareadme.com/) and [How to Write a Good README File](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/).* 
+*This README follows best practices as outlined in [Make a README](https://www.makeareadme.com/) and [How to Write a Good README File](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/).*
+
