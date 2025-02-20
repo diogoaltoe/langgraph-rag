@@ -1,0 +1,4 @@
+/vectorstore/chroma/
+/.idea/
+/vectorstore/qdrant/
+/.env

@@ -1,0 +1,37 @@
+[project]
+name = "langgraph-rag"
+version = "0.1.0"
+description = "Retrieve information in documents."
+authors = [
+    {name = "Diogo Altoé Lopes",email = "diogoaltoe@gmail.com"}
+]
+license = {text = "Apache License 2.0"}
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "langchain (>=0.3.15,<0.4.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "black (>=24.10.0,<25.0.0)",
+    "beautifulsoup4 (>=4.12.3,<5.0.0)",
+    "tiktoken (>=0.8.0,<0.9.0)",
+    "unstructured (>=0.16.14,<0.17.0)",
+    "nltk (>=3.9.1,<4.0.0)",
+    "fastapi (>=0.115.7,<0.116.0)",
+    "jinja2 (>=3.1.5,<4.0.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+    "streamlit (>=1.41.1,<2.0.0)",
+    "streamlit-chat (>=0.1.1,<0.2.0)",
+    "tqdm (>=4.67.1,<5.0.0)",
+    "langchain-ollama (>=0.2.2,<0.3.0)",
+    "langchain-qdrant (>=0.2.0,<0.3.0)",
+    "langchain-community (>=0.3.15,<0.4.0)",
+    "langchain-chroma (>=0.2.1,<0.3.0)",
+    "pytest (>=8.3.4,<9.0.0)",
+    "tavily-python (>=0.5.1,<0.6.0)",
+    "langgraph (>=0.2.70,<0.3.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
