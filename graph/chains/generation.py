@@ -2,9 +2,11 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_ollama import ChatOllama
 
+from graph.const import MODEL, MODEL_URL
+
 
 def generation_chain(question, documents):
-    llm = ChatOllama(model="llama3.2", temperature=0)
+    llm = ChatOllama(model=MODEL, temperature=0, base_url=MODEL_URL)
     # prompt = hub.pull("rlm/rag-prompt")
     prompt = PromptTemplate(
         input_variables=["context", "question"],

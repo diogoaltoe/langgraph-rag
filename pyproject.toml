@@ -1,5 +1,5 @@
 [project]
-name = "langgraph-rag"
+name = "langgraph_rag"
 version = "0.1.0"
 description = "Retrieve information in documents."
 authors = [
@@ -29,9 +29,9 @@ dependencies = [
     "pytest (>=8.3.4,<9.0.0)",
     "tavily-python (>=0.5.1,<0.6.0)",
     "langgraph (>=0.2.70,<0.3.0)",
+    "langgraph-checkpoint-sqlite (>=2.0.5,<3.0.0)",
 ]
 
-
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=2.0.0,<3.0.0", "setuptools>=61.0", "wheel"]
 build-backend = "poetry.core.masonry.api"

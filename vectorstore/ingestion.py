@@ -16,7 +16,9 @@ def ingest_docs():
     doc_list = loader.load()
     print(f"**** Loaded {len(doc_list)} documents ****")
 
-    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=600, chunk_overlap=100)
+    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
+        chunk_size=600, chunk_overlap=100
+    )
     docs_splits = text_splitter.split_documents(doc_list)
     print(f"**** Splitted {len(docs_splits)} documents ****")
 
