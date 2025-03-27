@@ -1,5 +1,6 @@
-/vectorstore/chroma/
 /.idea/
-/vectorstore/qdrant/
 /.env
+/vectorstore/chroma/
+/vectorstore/qdrant/
 /db/
+/docs/

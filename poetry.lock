@@ -2047,6 +2047,24 @@ aiosqlite = ">=0.20.0,<0.21.0"
 langgraph-checkpoint = ">=2.0.15,<3.0.0"
 
 [[package]]
+name = "langgraph-cli"
+version = "0.1.75"
+description = "CLI for interacting with LangGraph API"
+optional = false
+python-versions = "<4.0.0,>=3.9.0"
+groups = ["main"]
+files = [
+    {file = "langgraph_cli-0.1.75-py3-none-any.whl", hash = "sha256:edf381264982aef8d9279706c813535c3becf4233620501a7240025b790e55c5"},
+    {file = "langgraph_cli-0.1.75.tar.gz", hash = "sha256:4b490a9a3f8b8b910422e0d84d054066902de45d5df0f23b18d4130aaac9ac06"},
+]
+
+[package.dependencies]
+click = ">=8.1.7,<9.0.0"
+
+[package.extras]
+inmem = ["langgraph-api (>=0.0.27,<0.1.0) ; python_version >= \"3.11\" and python_version < \"4.0\"", "python-dotenv (>=0.8.0)"]
+
+[[package]]
 name = "langgraph-sdk"
 version = "0.1.51"
 description = "SDK for interacting with LangGraph API"
@@ -5818,4 +5836,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.13"
-content-hash = "b8e678d0e813c9bcfcd849b560b4f281d5f5c503d3bd38132bcaac523de9540c"
+content-hash = "8cb3fff4582c37c3875a5e354c78789f77114d82e8a796c4dfce11fdb037d8b0"

@@ -1,17 +1,24 @@
 from typing import Dict, Any
 
+from dotenv import load_dotenv
 from langchain_community.tools import TavilySearchResults
 from langchain.schema import Document
 
 from graph.state import GraphState
 
+load_dotenv()
+
 web_search_tool = TavilySearchResults(max_results=3)
 
 
-def web_search(state: GraphState) -> Dict[str, Any]:
+def web_search_node(state: GraphState) -> Dict[str, Any]:
     print("---WEB SEARCH---")
+
     question = state["question"]
-    documents = state["documents"]
+    # print("--> question:", question)
+
+    documents = state.get("documents", [])
+    # print("--> DOCUMENTS:", documents)
 
     results = web_search_tool.invoke({"query": question})
     joined_results = "\n".join(result["content"] for result in results)
@@ -21,9 +28,6 @@ def web_search(state: GraphState) -> Dict[str, Any]:
         documents.append(web_results)
     else:
         documents = [web_results]
+    # print("--> documents:", documents)
 
-    return {"question": question, "documents": documents}
-
-
-if __name__ == "__main__":
-    web_search(state={"question": "basic principles of Krav Maga", "documents": None})
+    return {"documents": documents}

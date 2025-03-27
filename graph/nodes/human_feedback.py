@@ -3,10 +3,8 @@ from typing import Dict, Any
 from graph.state import GraphState
 
 
-def human_feedback(state: GraphState) -> Dict[str, Any]:
+def human_feedback_node(state: GraphState) -> Dict[str, Any]:
     print("---HUMAN FEEDBACK---")
-
-    print("ANSWER:", state["generation"])
 
     user_input = input("Is this a acceptable answer? (yes/no): ")
 
@@ -17,4 +15,4 @@ def human_feedback(state: GraphState) -> Dict[str, Any]:
         print("---HUMAN FEEDBACK: NO---")
         print("The generated answer is NOT acceptable.")
 
-    return {"user_feedback": user_input}
+    return {"is_acceptable_answer": user_input}
